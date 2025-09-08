@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, MapPin, Phone, Mail, Calendar, Users, Sparkles, Award, Clock, Shield, Heart, Quote } from "lucide-react"
 import Link from "next/link"
-
+import Images from "next/image"
 export default function HomePage() {
   const scrollToGallery = () => {
     const gallerySection = document.getElementById("gallery-section")
@@ -28,51 +28,67 @@ export default function HomePage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/images/hero-banquet-hall.png"
-              alt="Grand Majestic Banquet Hall"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/images/hero-banquet-hall.png"
+      alt="Grand Majestic Banquet Hall"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/60"></div>
+  </div>
 
-          {/* Hero Content */}
-          <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <Badge className="mb-6 gold-accent text-lg px-4 py-2 animate-fade-in">Premier Event Venue in GTA</Badge>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary mb-6 text-balance animate-slide-up">
-              Grand Majestic
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground mb-4 font-light animate-slide-up animation-delay-200">
-              Banquet and Convention Centre
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty animate-slide-up animation-delay-400">
-              Where your most precious moments become unforgettable memories. Elegant venues for weddings, corporate
-              events, and celebrations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animation-delay-600">
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  className="gold-accent text-lg px-8 py-4 hover:scale-105 transition-transform duration-200"
-                >
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book Your Event
-                </Button>
-              </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={scrollToGallery}
-                className="text-lg px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent hover:scale-105 transition-all duration-200"
-              >
-                View Gallery
-              </Button>
-            </div>
-          </div>
-        </section>
+  {/* Hero Content */}
+  <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-1 sm:space-y-1 md:space-y-2">
+    <Badge className="gold-accent text-sm sm:text-base md:text-lg px-3 sm:px-4 py-1.5 sm:py-2 animate-fade-in">
+      Premier Event Venue in GTA
+    </Badge>
+
+    {/* Logo */}
+    <Images
+      src="/images/logo.png"
+      alt="Logo"
+      width={460}
+      height={120}
+      className="mx-auto max-w-[65%] sm:max-w-[55%] md:max-w-[400px] animate-slide-up"
+    />
+
+    {/* Subtitle */}
+    <p className="text-sm sm:text-base md:text-lg text-foreground font-light animate-slide-up animation-delay-200">
+      Banquet and Convention Centre
+    </p>
+
+    {/* Description */}
+    <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto animate-slide-up animation-delay-400 leading-tight">
+      Where your most precious moments become unforgettable memories. Elegant venues for weddings, corporate
+      events, and celebrations.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-2 justify-center items-center animate-slide-up animation-delay-600">
+      <Link href="/contact">
+        <Button
+          size="lg"
+          className="gold-accent text-sm sm:text-base px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 hover:scale-105 transition-transform duration-200"
+        >
+          <Calendar className="mr-2 h-4 w-4" />
+          Book Your Event
+        </Button>
+      </Link>
+      <Button
+        size="lg"
+        variant="outline"
+        onClick={scrollToGallery}
+        className="text-sm sm:text-base px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent hover:scale-105 transition-all duration-200"
+      >
+        View Gallery
+      </Button>
+    </div>
+  </div>
+</section>
+
+
 
         <section className="py-16 px-4 bg-card/50">
           <div className="max-w-6xl mx-auto">

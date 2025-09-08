@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, Calendar } from "lucide-react"
-
+import Image from "next/image"
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -43,7 +43,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="text-2xl font-serif font-bold text-primary group-hover:scale-105 transition-transform duration-200">
-              Grand Majestic
+              <Image src="/images/logo.png" alt="Logo" width={140} height={80} />
             </div>
           </Link>
 
