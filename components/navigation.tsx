@@ -113,7 +113,7 @@ export default function Navigation() {
               className="flex items-center space-x-2 text-sm text-muted-foreground px-2 py-1 hover:text-primary transition-colors duration-200"
             >
               <Phone className="h-4 w-4" />
-              <span>416-279-0292</span>
+              <span>416-269-0292</span>
             </button>
             <Link href="/contact" onClick={() => setIsOpen(false)}>
               <Button className="gold-accent mx-2 hover:scale-105 transition-transform duration-200">
