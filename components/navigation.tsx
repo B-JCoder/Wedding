@@ -68,7 +68,7 @@ export default function Navigation() {
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer"
             >
               <Phone className="h-4 w-4" />
-              <span>416-279-0292</span>
+              <span>416-269-0292</span>
             </button>
             <Link href="/contact">
               <Button className="gold-accent hover:scale-105 transition-transform duration-200 focus-gold">
